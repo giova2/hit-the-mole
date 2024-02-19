@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+</body>
+</html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hit the mole</title>
+    
+    <script type="module" crossorigin src="/assets/index-BydxwhGF.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D2tWTP7P.css">
+  </head>
+  <body>
+    <div class="flex flex-col justify-center items-center">
+      <div class="info">
+        <inpu class="flex flex-col justify-center items-center">
+          <h1 class="max-lg:text-lg lg:text-xl font-bold">Hit the mole!</h1>
+          
+          <h3 class="mt-1 max-lg:text-base lg:text-lg font-bold">Your score:</h3>
+          <h3 class="max-lg:text-sm lg:text-base" id="score">0</h3>
+          
+          <h3 class="mt-1 max-lg:text-base lg:text-lg font-bold">Seconds left:</h3>
+          <h3 class="max-lg:text-sm lg:text-base" id="time-left">60</h3>
+          
+          <div id="difficulty" class="mt-1 flex lg:flex-col justify-center items-center">
+            <h3 class="max-lg:text-base lg:text-lg font-bold">Difficulty level</h3>
+            <input class="max-lg:ml-2" name="difficulty" type="radio" value="1000" checked>Easy</input>
+            <input class="max-lg:ml-2" name="difficulty" type="radio" value="600">Medium</input>
+            <input class="max-lg:ml-2" name="difficulty" type="radio" value="300">Hard</input>
+          </div>
+          <button id="playAgain" class="px-4 py-2 mt-2 rounded border bg-blue-600 text-slate-300">Play</button>
+          <button id="stopGame" class="px-4 py-2 mt-2 rounded border bg-blue-600 text-slate-300 hidden">Stop</button>
+        </div>
+      </div>
+      
+      <div class="play-area flex max-lg:justify-center lg:justify-end">
+        <div class="play-area-col flex justify-center items-center flex-col">
+          <div class="square" id="1"></div>
+          <div class="square" id="2"></div>
+          <div class="square" id="3"></div>
+        </div>
+        <div class="play-area-col flex justify-center items-center flex-col">
+
+          <div class="square" id="4"></div>
+          <div class="square" id="5"></div>
+          <div class="square" id="6"></div>
+        </div>
+        <div class="play-area-col flex justify-center items-center flex-col">
+
+          <div class="square" id="7"></div>
+          <div class="square" id="8"></div>
+          <div class="square" id="9"></div>
+        </div>
+      </div>
+    </div>
+      
+  </body>
+</html>
