@@ -28,22 +28,35 @@ const moveMole = () => {
   return setInterval(randomSquare, velocity)
 }
 
-squares.forEach(square => {
-  square.addEventListener('mouseup', () => {
-    if(square.id === hitPosition){
-      square.classList.add('catched')
-      setTimeout(() => {
-        square.classList.remove('catched')
-      }, velocity - 100);
-      result = result + 1
-      score.textContent = result
-      hitPosition = null
-    }
-  })
-})
+const addSquareListeners = () => {
 
+  squares.forEach(square => {
+    square.addEventListener('mouseup', () => {
+      if(square.id === hitPosition && currentTime > 0){
+        square.classList.add('catched')
+        setTimeout(() => {
+          square.classList.remove('catched')
+        }, velocity - 100);
+        result = result + 1
+        score.textContent = result
+        hitPosition = null
+      }
+    })
+  })
+}
+
+const removeSquareListeners = () => {
+  squares.forEach(square => {
+    square.removeEventListener('mouseup', () => {
+
+    });
+  })
+}
+  
 
 const stopGame = () => {
+  removeSquareListeners()
+  currentTime = 0
   timeLeft.textContent = 0
   clearInterval(countDownTimerId)
   clearInterval(moveMoleTimerId)
@@ -75,12 +88,8 @@ const setDifficulty = () => {
   }
 }
 
-// moveMoleTimerId = moveMole()
-// countDownTimerId = startCountDown()
-
-
-
 const restartGame = () => {
+  addSquareListeners();
   setDifficulty();
   // restart timer
   currentTime = 60;

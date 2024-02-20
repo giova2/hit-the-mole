@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 body {
-  background: radial-gradient(circle at 50%, #684505, #684505 50%, #684505 90%, black 100%);
+  background: radial-gradient(circle at 50%, #684505, #64341B 50%, #744123 90%, black 100%);
+  background-image: url('fondo-suelo-marron.jpg');
   height: 100vh;
 }
 
@@ -20,11 +21,12 @@ body {
 }
 
 .play-area-col {
-  background: #724f0f;
+  background-color: #64341B99;
 }
 
 .mole {
   background-image: url('mole.png');
+  background-color: #64341B99;
   background-size: cover;
   background-position-x: 50%;
   transition: all .25 ease-in-out;
@@ -38,8 +40,16 @@ body {
   min-width: 300px;
   position: relative;
   padding:1rem;
-  border: 1px solid white;
+  border: 5px solid white;
   background: beige;
+  transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 1024px){
+[name="difficulty"]{
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
 }
 
 @media (min-width: 1024px){
